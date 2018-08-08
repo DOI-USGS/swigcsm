@@ -7,4 +7,5 @@
 
 %import model.i
 %import geometricmodel.i
+%import csm.i
 %include RasterGM.h

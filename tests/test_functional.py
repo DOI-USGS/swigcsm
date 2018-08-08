@@ -45,4 +45,5 @@ def test_isd_to_model_to_ground(isd, plugin):
     assert model.getVersion().version() == '0.1.0'
     image_coord = csmapi.ImageCoord(1,1)
     assert hasattr(model, 'imageToGround')
-    
+    gnd = model.imageToGround(image_coord, 0)
+    print(gnd.x, gnd.y, gnd.z)
