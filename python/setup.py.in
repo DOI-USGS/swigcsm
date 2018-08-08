@@ -1,0 +1,14 @@
+import setuptools.command.install
+import shutil
+from distutils.sysconfig import get_python_lib
+
+if __name__ == '__main__':
+    setuptools.setup(
+        name='csmapi',
+        version='0.1.0',
+        py_modules=['csmapi'],
+        package_data={'csmapi':['_csmapi.so']},
+        license='UnLicense',
+        author='jlaura',
+        author_email='jlaura@usgs.gov'
+)

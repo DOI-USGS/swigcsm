@@ -1,0 +1,9 @@
+%module csmapi
+%include "csm.i"
+%include "version.i"
+%include "ellipsoid.i"
+%include "warning.i"
+%include "isd.i"
+%include "rastergm.i"
+%include "plugin.i"
+%include "model.i"
