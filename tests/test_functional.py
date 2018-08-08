@@ -43,6 +43,6 @@ def test_isd_to_model_to_ground(isd, plugin):
     
     model = plugin.constructModelFromISD(isd, model_name)
     assert model.getVersion().version() == '0.1.0'
-    print(dir(model))
-    assert False
+    image_coord = csmapi.ImageCoord(1,1)
+    assert hasattr(model, 'imageToGround')
     

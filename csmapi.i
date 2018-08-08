@@ -4,6 +4,7 @@
 %include "ellipsoid.i"
 %include "warning.i"
 %include "isd.i"
+%include "model.i"
+%include "geometricmodel.i"
 %include "rastergm.i"
 %include "plugin.i"
-%include "model.i"

@@ -5,4 +5,6 @@
 
 %ignore CSM_RASTER_FAMILY;
 
+%import model.i
+%import geometricmodel.i
 %include RasterGM.h
