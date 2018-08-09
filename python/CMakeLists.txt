@@ -7,8 +7,11 @@ set(CMAKE_SWIG_FLAGS "")
 set_source_files_properties(../csmapi.i 
                             PROPERTIES CPLUSPLUS ON)
 
-find_path(CSM_INCLUDE_DIR NAMES csm.h PATH_SUFFIXES csm)
-find_library(CSM_LIBRARY NAMES csmapi)
+find_path(CSM_INCLUDE_DIR NAMES csm.h 
+                          PATH_SUFFIXES csm 
+                          PATHS $ENV{CONDA_PREFIX}/include)
+find_library(CSM_LIBRARY NAMES csmapi
+                         PATHS $ENV{CONDA_PREFIX}/lib)
 
 include_directories(${CSM_INCLUDE_DIR})
 

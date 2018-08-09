@@ -1,0 +1,23 @@
+package:
+  name: csmwrapper
+  version: "0.1.0"
+
+source:
+  git_url: https://github.com/USGS-Astrogeology/CSM-Swig.git
+
+requirements:
+  build:
+    - {{ compiler('cxx') }}
+    - cmake >=3.10
+    - libcsm
+
+test:
+  commands:
+    - import csmapi
+    - import csmapi.Isd
+    
+
+about:
+  home: https://github.com/USGS-Astrogeology/CSM-Swig
+  license: None
+summary: "SWIG Wrapper to generate bindings to the Community Sensor Model"
