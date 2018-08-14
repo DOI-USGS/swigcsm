@@ -10,13 +10,14 @@ requirements:
     - {{ compiler('cxx') }}
     - cmake >=3.10
     - libcsm
+  run
+    - libcsm
 
 test:
   commands:
     - import csmapi
     - import csmapi.Isd
     
-
 about:
   home: https://github.com/USGS-Astrogeology/CSM-Swig
   license: None
