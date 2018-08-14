@@ -8,7 +8,9 @@ import pytest
 import csmapi
 
 # Load a plugin with CSM compliant sensors
-lib = ctypes.CDLL('/data/big/github/CSM-CameraModel/build/libusgscsm.so')
+from ctypes.util import find_library
+
+lib = ctypes.CDLL(find_library('usgscsm.so'))
 
 @pytest.fixture
 def datadir(tmpdir, request):
