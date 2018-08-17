@@ -1,6 +1,7 @@
-source activate base
+#!/bin/bash
+
 mkdir build && cd build
-cmake -DCMAKE_BUILD_TYPE=Release -DCMAKE_INSTALL_PREFIX=$PREFIX ..
+cmake -DCMAKE_BUILD_TYPE=Release -DCMAKE_INSTALL_PREFIX=$PREFIX -DANACONDA_PYTHON_VERBOSE=ON ..
 make
 cd python
-python setup.py install
+$PYTHON setup.py install --single-version-externally-managed --record=/tmp/record.txt

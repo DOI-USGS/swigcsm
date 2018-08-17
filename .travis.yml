@@ -14,9 +14,13 @@ os:
     fi
   - bash miniconda.sh -b -p $HOME/miniconda
   - export PATH="$HOME/miniconda/bin:$PATH"
-  - conda install -y -c usgs-astrogeology libcsm
-  - conda install -y -c conda-forge cmake pytest 
+  # Add the channels that conda build is going to use
+  - conda config --add channels usgs-astrogeology
+  - conda config --add channels conda-forge
+  # Setup to do the build 
+  - conda install -y -q conda-build anaconda-client
+  - conda config --set anaconda_upload yes
 
 script:
-  - .run_build.sh
-  -  pytest tests 
+  # Build and upload on success
+  - conda build --token $CONDA_UPLOAD_TOKEN recipe -q

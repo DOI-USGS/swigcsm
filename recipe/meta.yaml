@@ -1,22 +1,26 @@
 package:
-  name: csmwrapper
+  name: csmapi
   version: "0.1.0"
 
 source:
-  git_url: https://github.com/USGS-Astrogeology/CSM-Swig.git
+  # git_url: https://github.com/USGS-Astrogeology/CSM-Swig.git
+  path: ../
 
 requirements:
   build:
-    - {{ compiler('cxx') }}
+    - {{ compiler('cxx') }}  # [linux]
     - cmake >=3.10
     - libcsm
-  run
+    - python
+  host:
+    - python
+  run:
     - libcsm
+    - python
 
 test:
-  commands:
-    - import csmapi
-    - import csmapi.Isd
+  imports:
+    - csmapi
     
 about:
   home: https://github.com/USGS-Astrogeology/CSM-Swig
