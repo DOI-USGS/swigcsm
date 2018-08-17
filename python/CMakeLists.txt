@@ -24,9 +24,6 @@ swig_add_library(csmapi
 set_target_properties(_csmapi PROPERTIES LIBRARY_OUTPUT_DIRECTORY ${CMAKE_SWIG_OUTDIR})
 swig_link_libraries(csmapi ${CSM_LIBRARY} ${PYTHON_LIBRARY})
 
-#set_target_properties(csmapi PROPERTIES
-#                      RUNTIME_OUTPUT_DIRECTORY python/csmapi)
-
 # Build out a standard directory structure
 file(MAKE_DIRECTORY ${CMAKE_CURRENT_BINARY_DIR}/tests)
 
@@ -35,13 +32,3 @@ configure_file(${CMAKE_CURRENT_SOURCE_DIR}/setup.py.in
                ${CMAKE_CURRENT_BINARY_DIR}/setup.py) 
 configure_file(${CMAKE_CURRENT_SOURCE_DIR}/__init__.py
                ${CMAKE_CURRENT_BINARY_DIR}/csmapi/__init__.py)
-
-# Declare install target for python
-#install(TARGETS csmapi
-#        COMMAND "${PYTHON_EXECUTABLE} setup.py"
-#        COMPONENT swig-python)
-
-# Install target to call setup.py
-#add_custom_target(install-python
-#        DEPENDS _csmapi
-#COMMAND python ${SETUP_PY_OUT} install)
