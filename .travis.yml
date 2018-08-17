@@ -4,23 +4,23 @@ os:
   - linux
   - osx
 
- install:
-  # Install a supported cmake version (>= 3.10)
-  - |
-    if [ "$TRAVIS_OS_NAME" == "linux" ]; then
-      wget https://repo.continuum.io/miniconda/Miniconda3-latest-Linux-x86_64.sh -O miniconda.sh;
-    else
-      curl -o miniconda.sh  https://repo.continuum.io/miniconda/Miniconda3-latest-MacOSX-x86_64.sh;
-    fi
-  - bash miniconda.sh -b -p $HOME/miniconda
-  - export PATH="$HOME/miniconda/bin:$PATH"
-  # Add the channels that conda build is going to use
-  - conda config --add channels usgs-astrogeology
-  - conda config --add channels conda-forge
-  # Setup to do the build 
-  - conda install -y -q conda-build anaconda-client
-  - conda config --set anaconda_upload yes
+install:
+# Install a supported cmake version (>= 3.10)
+- |
+  if [ "$TRAVIS_OS_NAME" == "linux" ]; then
+    wget https://repo.continuum.io/miniconda/Miniconda3-latest-Linux-x86_64.sh -O miniconda.sh;
+  else
+    curl -o miniconda.sh  https://repo.continuum.io/miniconda/Miniconda3-latest-MacOSX-x86_64.sh;
+  fi
+- bash miniconda.sh -b -p $HOME/miniconda
+- export PATH="$HOME/miniconda/bin:$PATH"
+# Add the channels that conda build is going to use
+- conda config --add channels usgs-astrogeology
+- conda config --add channels conda-forge
+# Setup to do the build 
+- conda install -y -q conda-build anaconda-client
+- conda config --set anaconda_upload yes
 
 script:
-  # Build and upload on success
-  - conda build --token $CONDA_UPLOAD_TOKEN recipe -q
+# Build and upload on success
+- conda build --token $CONDA_UPLOAD_TOKEN recipe -q
