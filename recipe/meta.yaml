@@ -12,6 +12,7 @@ requirements:
     - cmake >=3.10
     - libcsm
     - python
+    - swig
   host:
     - python
   run:
