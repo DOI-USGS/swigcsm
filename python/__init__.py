@@ -1,1 +1,1 @@
-from csmapi import *
+from csmapi.csmapi import *
