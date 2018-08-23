@@ -19,12 +19,11 @@ install:
 - conda config --add channels conda-forge
 # Setup to do the build 
 - conda install -y -q conda-build anaconda-client
-- conda config --set anaconda_upload yes 
 
 script:
 # Build and upload on success
 - if [ "${TRAVIS_PULL_REQUEST}" = "false" ] ;then
-    conda build --token $CONDA_UPLOAD_TOKEN recipe -q;
+    conda config --set anaconda_upload yes && conda build --token $CONDA_UPLOAD_TOKEN recipe -q;
   else
     conda build recipe -q;
   fi
