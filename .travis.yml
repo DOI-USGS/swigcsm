@@ -23,4 +23,8 @@ install:
 
 script:
 # Build and upload on success
-- conda build --token $CONDA_UPLOAD_TOKEN recipe -q
+- if $TRAVIS_PULL_REQUEST; then
+    conda build recipe -q;
+  else
+    conda build --token $CONDA_UPLOAD_TOKEN recipe -q;
+  fi
