@@ -11,7 +11,8 @@ set_source_files_properties(../csmapi.i
 find_path(CSM_INCLUDE_DIR NAMES csm.h 
                           PATH_SUFFIXES csm 
                           PATHS ${PYTHON_INCLUDE_DIR}/../)
-find_library(CSM_LIBRARY NAMES csmapi)
+find_library(CSM_LIBRARY NAMES csmapi
+            PATHS ${PYTHON_LIBRARY}/../)
 message("-- Found CSM Include: ${CSM_INCLUDE_DIR}")
 message("-- Found CSM Lib: ${CSM_LIBRARY}")
 
