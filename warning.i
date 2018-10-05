@@ -5,4 +5,5 @@
 
 %include "std_list.i"
 %include Warning.h
-%template(Warning_List) std::list<csm::Warning>;
+
+%template(WarningList) std::list<csm::Warning>;

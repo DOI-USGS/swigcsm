@@ -12,10 +12,10 @@
         $action
     } catch (const std::exception &e) {
         SWIG_exception(SWIG_RuntimeError, e.what());
-    } //catch (const csm::Warning &w) {
+    } catch (const csm::Warning &w) {
         // Converts the CSM warning into an error
-       // SWIG_exception(1, "This should be a warning, not a runtime error.");
-    //}
+        SWIG_exception(0, "This should be a warning, not a runtime error.");
+    }
 } 
 
 %import warning.i
