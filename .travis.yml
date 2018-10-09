@@ -30,7 +30,7 @@ before_install:
 
 install:
 # Setup to do the build 
-  - conda env update -n test -y -f environment.yml
+  - conda env update -n test -f environment.yml
 
 script:
   - mkdir build && cd build
