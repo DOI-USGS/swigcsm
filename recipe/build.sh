@@ -5,3 +5,4 @@ cmake -DCMAKE_BUILD_TYPE=Release -DCMAKE_INSTALL_PREFIX=$PREFIX -DANACONDA_PYTHO
 make
 cd python
 $PYTHON setup.py install --single-version-externally-managed --record=/tmp/record.txt
+cd ..
