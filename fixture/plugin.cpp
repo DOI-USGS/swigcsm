@@ -104,7 +104,7 @@ csm::Model *PluginFixture::constructModelFromState(const std::string& modelState
     csm::Model *sensor_model = 0;
 
     // Instantiate the model
-    FixtureSensorModel::FixtureSensorModel* mdsensor_model = new FixtureSensorModel();
+    FixtureSensorModel* mdsensor_model = new FixtureSensorModel();
  
 sensor_model = mdsensor_model;
 return sensor_model;
@@ -122,7 +122,7 @@ csm::Model *PluginFixture::constructModelFromISD(const csm::Isd &imageSupportDat
                   "PluginFixture::constructModelFromISD()");
   }
 
-  FixtureSensorModel::FixtureSensorModel *sensorModel = new FixtureSensorModel();
+  FixtureSensorModel *sensorModel = new FixtureSensorModel();
   return sensorModel;
 }
 
