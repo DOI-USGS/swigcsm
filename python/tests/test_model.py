@@ -42,6 +42,11 @@ def test_image_to_ground(model):
 def test_model_version(model):
     assert model.getVersion().version() == '0.1.0'
 
+def test_bad_get_image_time(model):
+    img_coord = csmapi.ImageCoord(-1,-1)
+    with pytest.raises(RuntimeError) as r:
+        model.getImageTime(img_coord)
+    
 def test_ground_to_image(model):
     assert hasattr(model, 'groundToImage')
     gnd_coord = csmapi.EcefCoord(0,0,0)
@@ -51,5 +56,7 @@ def test_ground_to_image(model):
 
 def test_bad_ground_to_image(model):
     gnd_coord = csmapi.EcefCoord(-1, -1, 0)
-    img = model.groundToImage(gnd_coord, 0)
-
+    with pytest.warns(Warning) as w:
+        img = model.groundToImage(gnd_coord, 0)
+        assert len(w) == 1
+    

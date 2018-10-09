@@ -21,16 +21,17 @@ csm::ImageCoord FixtureSensorModel::groundToImage(const csm::EcefCoord &groundPt
                               double *achievedPrecision,
                               csm::WarningList *warnings) const {
 
-     // Check that the pixel is actually in the image
-   if ((groundPt.x < 0) ||
-       (groundPt.y < 0)) {
+   csm::ImageCoord imagecoord = csm::ImageCoord(0,0);
+   
+   // Check that the pixel is actually in the image
+   if ((groundPt.x < 0) || (groundPt.y < 0)) {
+      csm::ImageCoord imagecoord = csm::ImageCoord(-1,-1);
       throw csm::Warning(
          csm::Warning::IMAGE_COORD_OUT_OF_BOUNDS,
          "The image coordinate is out of bounds of the image size.",
          "UsgsAstroLsSensorModel::groundToImage");
-   }
-
-  return csm::ImageCoord(0, 0);
+   };
+  return imagecoord;
 }
 
 csm::ImageCoord FixtureSensorModel::groundToImage(
