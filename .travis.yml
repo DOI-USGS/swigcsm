@@ -21,7 +21,7 @@ before_install:
   - export PATH="$HOME/miniconda/bin:$PATH"
 
   # Set up the env
-  - conda create -q -n test python=PYTHON_VERSION
+  - conda create -q -n test python=$PYTHON_VERSION
   - source activate test
 
   # Add the necessary channels
