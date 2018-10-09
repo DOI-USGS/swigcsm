@@ -31,15 +31,16 @@ before_install:
 install:
 # Setup to do the build 
   - conda env update -n test -f environment.yml
+  - conda install -y gcc_linux-64
 
 script:
   - mkdir build && cd build
-  - cmake .. && make
+  - CC=$(which gcc) CXX=$(which c++) cmake .. && make
   - |
     if [ "$TRAVIS_OS_NAME" == "linux" ]; then
       pytest python/tests/ --lib fixture/libfixturecsm.so;
     else
-      python/tests/ --lib fixture/libfixturecsm.dylib;
+      pytest python/tests/ --lib fixture/libfixturecsm.dylib;
     fi
     
 after_success:
