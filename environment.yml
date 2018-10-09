@@ -5,6 +5,7 @@ channels:
 dependencies:
   - cmake >= 3.10
   - libcsm
+  - csmapi
   - python
   - swig
   - numpy
