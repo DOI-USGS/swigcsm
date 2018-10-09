@@ -41,11 +41,7 @@ script:
     else
       python/tests/ --lib fixture/libfixturecsm.dylib;
     fi
-<<<<<<< HEAD
-
-=======
     
->>>>>>> 3bc2dd6ce03dc1837a3818c9b5df8748e34f256c
 after_success:
   - source deactivate
   - conda install -y -q conda-build anaconda-client
