@@ -4,7 +4,7 @@ package:
 
 source:
   git_url: https://github.com/USGS-Astrogeology/CSM-Swig.git
-  
+
 requirements:
   build:
     - {{ compiler('cxx') }}  # [linux]
@@ -22,9 +22,6 @@ requirements:
 test:
   imports:
     - csmapi
-  commands:
-    - pytest python/tests/ --lib=fixture/libfixturecsm.dylib  # [osx]
-    - pytest python/tests/ --lib=fixture/libfixturecsm.so  # [linux]
     
 about:
   home: https://github.com/USGS-Astrogeology/CSM-Swig
