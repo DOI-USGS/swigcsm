@@ -4,11 +4,6 @@ os:
   - linux
   - osx
 
-env:
-  - PYTHON_VERSION=3.5
-  - PYTHON_VERSION=3.6
-  - PYTHON_VERSION=3.7
-
 before_install:
   # Install a supported cmake version (>= 3.10)
   - |
@@ -21,10 +16,9 @@ before_install:
   - export PATH="$HOME/miniconda/bin:$PATH"
 
   # Set up the env
+  # Work around https://github.com/ContinuumIO/anaconda-issues/issues/6698 
   # - conda create -q -n test -y python=$PYTHON_VERSION
   # - source activate test
-  # Work around https://github.com/ContinuumIO/anaconda-issues/issues/6698 
-  - conda install -y -c conda-forge python=$PYTHON_VERSION
 
   # Add the necessary channels
   - conda config --add channels usgs-astrogeology
