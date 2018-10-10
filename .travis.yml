@@ -21,8 +21,8 @@ before_install:
   - export PATH="$HOME/miniconda/bin:$PATH"
 
   # Set up the env
-  # - conda create -q -n test -y python=$PYTHON_VERSION
-  # - source activate test
+  - conda create -q -n test -y python=$PYTHON_VERSION
+  - source activate test
   # Work around https://github.com/ContinuumIO/anaconda-issues/issues/6698 
   - conda install -y -c conda-forge python==$PYTHON_VERSION
 
@@ -32,7 +32,7 @@ before_install:
 
 install:
 # Setup to do the build 
-  - conda env update -n base -f environment.yml
+  - conda env update -n test -f environment.yml
   - conda install -c conda-forge -y pytest
   - |
     if [ "$TRAVIS_OS_NAME" == "linux" ]; then
