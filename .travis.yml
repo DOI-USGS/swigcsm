@@ -33,7 +33,7 @@ install:
   - conda env update -n test -f environment.yml
   - |
     if [ "$TRAVIS_OS_NAME" == "linux" ]; then
-      conda install -y gcc_linux-64 g++_linux-64;
+      conda install -y gcc_linux-64 gxx_linux-64;
     fi
 
 script:
