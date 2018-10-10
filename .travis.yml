@@ -23,8 +23,6 @@ before_install:
   # Set up the env
   - conda create -q -n test -y python=$PYTHON_VERSION
   - source activate test
-  # Work around https://github.com/ContinuumIO/anaconda-issues/issues/6698 
-  - conda install -y -c conda-forge python==$PYTHON_VERSION
 
   # Add the necessary channels
   - conda config --add channels usgs-astrogeology
