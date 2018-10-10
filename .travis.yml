@@ -21,8 +21,10 @@ before_install:
   - export PATH="$HOME/miniconda/bin:$PATH"
 
   # Set up the env
-  - conda create -q -n test -y python=$PYTHON_VERSION
-  - source activate test
+  # - conda create -q -n test -y python=$PYTHON_VERSION
+  # - source activate test
+  # Work around https://github.com/ContinuumIO/anaconda-issues/issues/6698 
+  - conda install -y -c conda-forge python=$PYTHON_VERSION
 
   # Add the necessary channels
   - conda config --add channels usgs-astrogeology
@@ -30,7 +32,8 @@ before_install:
 
 install:
 # Setup to do the build 
-  - conda env update -n test -f environment.yml
+  - conda env update -n default -f environment.yml
+  - conda install -c conda-forge -y pytest
   - |
     if [ "$TRAVIS_OS_NAME" == "linux" ]; then
       conda install -y gcc_linux-64 gxx_linux-64;
@@ -47,7 +50,7 @@ script:
     fi
     
 after_success:
-  - source deactivate
+  # - source deactivate
   - conda install -y -q conda-build anaconda-client
   - if [ "${TRAVIS_PULL_REQUEST}" = "false" ] ;then
       conda build --token $CONDA_UPLOAD_TOKEN recipe -q;
