@@ -32,7 +32,7 @@ before_install:
 
 install:
 # Setup to do the build 
-  - conda env update -n default -f environment.yml
+  - conda env update -n base -f environment.yml
   - conda install -c conda-forge -y pytest
   - |
     if [ "$TRAVIS_OS_NAME" == "linux" ]; then
