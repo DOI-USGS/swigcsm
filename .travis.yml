@@ -40,7 +40,7 @@ install:
 script:
   - mkdir build && cd build
   - cmake .. && make
-  - cd python && python setup.py install
+  - cd python && python setup.py install && cd ..
   - |
     if [ "$TRAVIS_OS_NAME" == "linux" ]; then
       pytest python/tests/ --lib fixture/libfixturecsm.so;
