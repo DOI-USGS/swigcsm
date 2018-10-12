@@ -4,7 +4,7 @@ package:
 
 source:
   git_url: https://github.com/USGS-Astrogeology/CSM-Swig.git
-  
+
 requirements:
   build:
     - {{ compiler('cxx') }}  # [linux]
