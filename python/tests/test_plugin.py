@@ -31,6 +31,15 @@ def test_plugin_list_type(plugin_pool):
     plugin_list = plugin_pool.getList()
     assert isinstance(plugin_list, csmapi.PluginList)
 
+def test_plugin_list_element_type_by_position(plugin_pool):
+    plugin_list = plugin_pool.getList()
+    assert isinstance(plugin_list[0], csmapi.Plugin)
+    
+def test_plugin_list_element_type_via_iterator(plugin_pool):
+    plugin_list = plugin_pool.getList()
+    for i in plugin_list:
+        assert isinstance(i, csmapi.Plugin)
+
 def test_plugin_name(plugin_pool):
     pl = plugin_pool.getList()[0]
     plugin_name = pl.getPluginName()
