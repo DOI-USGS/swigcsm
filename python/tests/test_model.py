@@ -17,8 +17,7 @@ def isd():
 
 @pytest.fixture
 def plugin():
-    plugin = csmapi.Plugin.findPlugin('PluginFixture')
-    return plugin 
+    return csmapi.Plugin.findPlugin('PluginFixture') 
 
 @pytest.fixture
 def model(isd, plugin):
@@ -59,4 +58,3 @@ def test_bad_ground_to_image(model):
     with pytest.warns(Warning) as w:
         img = model.groundToImage(gnd_coord, 0)
         assert len(w) == 1
-    
