@@ -4,7 +4,7 @@ channels:
   - usgs-astrogeology
 dependencies:
   - cmake >= 3.10
-  - libcsm
+  - csm
   - python
   - swig
   - numpy
