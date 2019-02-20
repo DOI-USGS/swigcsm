@@ -9,11 +9,10 @@ requirements:
   build:
     - {{ compiler('cxx') }}  # [linux]
     - cmake >=3.10
+  host:
     - libcsm
     - python
     - swig
-  host:
-    - python
   run:
     - libcsm
     - python

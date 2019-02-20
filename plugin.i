@@ -1,19 +1,20 @@
 %module(package="csmapi") plugin
 %{
     #include "Plugin.h"
-
+    typedef csm::Plugin Plugin;
 %}
 
 %include <std_string.i>
 %include <std_list.i>
 %include Model.h
 
-
 %apply SWIGTYPE *DYNAMIC { csm::Model * };
 
 %include Plugin.h
+typedef csm::Plugin Plugin;
+// Returns a list of pointer to pointers (which is necessary because the 
+// plugin is an abstract base class...)
 %template(PluginList) std::list<const csm::Plugin*>;
-
 %{
     namespace swig {
     template <> struct traits<csm::Plugin>
@@ -26,7 +27,6 @@
     };
     }
 %}
-
 
 // A general purpose function for dynamic casting of a Model *
 %{
