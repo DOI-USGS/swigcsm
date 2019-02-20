@@ -1,7 +1,6 @@
 name: csmswig
 channels:
   - conda-forge
-  - usgs-astrogeology
 dependencies:
   - cmake >= 3.10
   - csm
