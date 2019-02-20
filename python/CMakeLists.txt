@@ -22,8 +22,16 @@ include_directories(${CSM_INCLUDE_DIR})
 swig_add_library(csmapi
                  LANGUAGE python 
                  SOURCES ../csmapi.i)
+
 set_target_properties(_csmapi PROPERTIES LIBRARY_OUTPUT_DIRECTORY ${CMAKE_SWIG_OUTDIR})
-swig_link_libraries(csmapi ${CSM_LIBRARY} ${PYTHON_LIBRARY})
+
+if (APPLE)
+     set_target_properties(_csmapi PROPERTIES LINK_FLAGS "-undefined dynamic_lookup")
+     # On OSX, do not link python - this causes segfaults
+     swig_link_libraries(csmapi ${CSM_LIBRARY})
+else()
+     swig_link_libraries(csmapi ${CSM_LIBRARY} ${PYTHON_LIBRARY})
+endif()
 
 # Build out a standard directory structure
 # file(MAKE_DIRECTORY ${CMAKE_CURRENT_BINARY_DIR}/tests)
