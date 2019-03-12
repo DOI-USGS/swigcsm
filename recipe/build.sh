@@ -1,6 +1,6 @@
 #!/bin/bash
 
-mkdir build && cd build
+mkdir -p build && cd build
 cmake -DCMAKE_BUILD_TYPE=Release -DCMAKE_INSTALL_PREFIX=$PREFIX -DANACONDA_PYTHON_VERBOSE=ON ..
 make
 cd python

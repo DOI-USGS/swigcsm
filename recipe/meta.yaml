@@ -9,19 +9,20 @@ requirements:
   build:
     - {{ compiler('cxx') }}  # [linux]
     - cmake >=3.10
+    - python
   host:
-    - libcsm
+    - csm
     - python
     - swig
   run:
-    - libcsm
+    - csm
     - python
     - numpy
 
 test:
   imports:
     - csmapi
-    
+
 about:
   home: https://github.com/USGS-Astrogeology/CSM-Swig
   license: None
