@@ -2,8 +2,6 @@
 include(FindPythonAnaconda.cmake)
 include_directories(${PYTHON_INCLUDE_DIR})
 
-message(STATUS "${PYTHON_INCLUDE_DIR}")
-
 set(CMAKE_SWIG_FLAGS "")
 set(CMAKE_SWIG_OUTDIR csmapi)
 set_source_files_properties(../csmapi.i
