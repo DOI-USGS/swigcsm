@@ -5,6 +5,7 @@ os:
   - osx
 
 env:
+  - PYTHON_VERSION=3.5
   - PYTHON_VERSION=3.6
   - PYTHON_VERSION=3.7
 
@@ -53,7 +54,7 @@ after_success:
   - conda install -y -q conda-build anaconda-client
   - cd ../  # Step out of the python dir and out of the build dir
   - if [ "${TRAVIS_PULL_REQUEST}" = "false" ] ;then
-      conda config --set anaconda_upload yes
+      conda config --set anaconda_upload yes;
       conda build --token $CONDA_UPLOAD_TOKEN recipe -q;
     else
       conda build recipe -q;
