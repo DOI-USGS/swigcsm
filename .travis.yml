@@ -36,6 +36,8 @@ install:
     if [ "$TRAVIS_OS_NAME" == "linux" ]; then
       conda install -y -c conda-forge/label/gcc7 python=$PYTHON_VERSION
       conda install -y gcc_linux-64 gxx_linux-64;
+    else
+      conda install -y -c conda-forge python=$PYTHON_VERSION
     fi
 
 script:
