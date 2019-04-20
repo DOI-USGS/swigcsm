@@ -58,3 +58,9 @@ def test_bad_ground_to_image(model):
     with pytest.warns(Warning) as w:
         img = model.groundToImage(gnd_coord, 0)
         assert len(w) == 1
+
+def test_ellipsoid_is_settable(model):
+    assert isinstance(csmapi.SettableEllipsoid.getEllipsoid(model), csmapi.Ellipsoid)
+    print(dir(model))
+    print(model.getEllipsoid(), type(model.getEllipsoid()))
+    return False
