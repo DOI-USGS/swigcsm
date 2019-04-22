@@ -8,4 +8,5 @@
 %include "geometricmodel.i"
 %include "rastergm.i"
 %include "plugin.i"
+%include "settableellipsoid.i"
 %include "bytestreamisd.i"
