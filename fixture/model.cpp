@@ -483,3 +483,12 @@ std::vector<double> FixtureSensorModel::getCrossCovarianceMatrix(
                    "Unsupported function",
                    "FixtureSensorModel::getCrossCovarianceMatrix");
 }
+
+csm::Ellipsoid FixtureSensorModel::getEllipsoid() const {
+    return csm::Ellipsoid(m_majorAxis, m_minorAxis);
+}
+
+void FixtureSensorModel::setEllipsoid(const csm::Ellipsoid &ellipsoid) {
+    m_majorAxis = ellipsoid.getSemiMajorRadius();
+    m_minorAxis = ellipsoid.getSemiMinorRadius();
+}

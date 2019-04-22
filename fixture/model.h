@@ -188,16 +188,21 @@ public:
    virtual std::string getModelState() const;
 
    virtual void replaceModelState(const std::string& argState);
+   
+   virtual csm::Ellipsoid getEllipsoid() const;
 
+   virtual void setEllipsoid(const csm:: Ellipsoid &ellipsoid);
 
 
 private:
    // This private form of the g2i method is used to ensure thread safety.
    virtual csm::ImageCoord groundToImage(
-      const csm::EcefCoord& groundPt,
-      const std::vector<double> &adjustments,
-      double desiredPrecision = 0.001,
-      double* achievedPrecision = NULL,
-      csm::WarningList* warnings = NULL) const;
+   const csm::EcefCoord& groundPt,
+   const std::vector<double> &adjustments,
+   double desiredPrecision = 0.001,
+   double* achievedPrecision = NULL,
+   csm::WarningList* warnings = NULL) const;
+   double m_minorAxis;
+   double m_majorAxis;
 };
 #endif
