@@ -1,6 +1,6 @@
 %module(package="csmapi") bytestreamisd
 %{
-    #include "bytestreamisd.h"    
+    #include "BytestreamIsd.h"    
 %}
 
-%include "bytestreamisd.h"
+%include "BytestreamIsd.h"
