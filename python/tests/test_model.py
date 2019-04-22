@@ -61,6 +61,3 @@ def test_bad_ground_to_image(model):
 
 def test_ellipsoid_is_settable(model):
     assert isinstance(csmapi.SettableEllipsoid.getEllipsoid(model), csmapi.Ellipsoid)
-    print(dir(model))
-    print(model.getEllipsoid(), type(model.getEllipsoid()))
-    return False
