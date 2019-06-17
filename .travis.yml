@@ -57,7 +57,7 @@ after_success:
   - cd ../  # Step out of the python dir and out of the build dir
   - if [ "${TRAVIS_PULL_REQUEST}" = "false" ] ;then
       conda config --set anaconda_upload yes;
-      conda build --token $CONDA_UPLOAD_TOKEN recipe -q;
+      conda build --token $CONDA_UPLOAD_TOKEN --python $PYTHON_VERSION recipe -q;
     else
       conda build recipe -q;
     fi
