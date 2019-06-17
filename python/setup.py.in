@@ -6,6 +6,7 @@ if __name__ == '__main__':
         version='0.1.0',
         packages=['csmapi'],
         package_data={'':['_csmapi.so']},
+        zip_safe=False,  # Some OSes can not dynamically load an so from an egg (zipfile)
         license='UnLicense',
         author='jlaura',
         author_email='jlaura@usgs.gov'
