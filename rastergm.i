@@ -1,6 +1,7 @@
 %module(package="csmapi") rastergm
 %include <std_pair.i>
 %include <std_vector.i>
+%template(VecDouble) std::vector<double>;
 %template(SensorPartials) std::pair<double, double>;
 %template(VecSensorPartials) std::vector<std::pair<double, double>>;
 
