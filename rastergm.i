@@ -1,4 +1,9 @@
 %module(package="csmapi") rastergm
+%include <std_pair.i>
+%include <std_vector.i>
+%template(SensorPartials) std::pair<double, double>;
+%template(VecSensorPartials) std::vector<std::pair<double, double>>;
+
 %{
     #include "RasterGM.h"
 %}
@@ -13,7 +18,7 @@
     } catch (const csm::Warning &e) {
         PyErr_WarnEx(PyExc_UserWarning, e.getMessage().c_str(), 1);
     }
-} 
+}
 %import model.i
 %import geometricmodel.i
 %import csm.i
