@@ -12,15 +12,13 @@ requirements:
   build:
     - {{ compiler('cxx') }}  # [linux]
     - cmake >=3.10
+    - swig
     - python
   host:
-    - csm
-    - python
-    - swig
+    - python >= 3
   run:
     - csm
-    - python
-    - numpy
+    - python 
 
 test:
   imports:
