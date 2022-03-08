@@ -3,11 +3,11 @@ import setuptools
 if __name__ == '__main__':
     setuptools.setup(
         name='csmapi',
-        version='0.1.0',
+        version='${CMAKE_PROJECT_VERSION}',
         packages=['csmapi'],
         package_data={'':['_csmapi.so']},
         zip_safe=False,  # Some OSes can not dynamically load an so from an egg (zipfile)
-        license='UnLicense',
+        license='CC0-1.0',
         author='jlaura',
         author_email='jlaura@usgs.gov'
 )
