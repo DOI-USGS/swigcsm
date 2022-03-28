@@ -21,7 +21,7 @@ text)](https://creativecommons.org/publicdomain/zero/1.0/legalcode).
 
 ### No Copyright
 
-The authors have associated their contributions to the ISIS project
+The authors have associated their contributions to the swigcsm project
 with this deed, and have dedicated the work to the public domain
 by waiving all of their rights to the work worldwide under copyright
 law, including all related and neighboring rights, to the extent
@@ -38,7 +38,7 @@ by CC0, nor are the rights that other persons may have in the work
 or in how the work is used, such as publicity or privacy rights.
 
 Unless expressly stated otherwise, the authors who have associated
-the ISIS project with this deed make no warranties about the work,
+the swigcsm project with this deed make no warranties about the work,
 and disclaim liability for all uses of the work, to the fullest
 extent permitted by applicable law. When using or citing the work,
 you should not imply endorsement by the authors.
