@@ -2,8 +2,8 @@ name: csmswig
 channels:
   - conda-forge
 dependencies:
-  - cmake >= 3.10
+  - cmake >= 3.14
   - csm
-  - python
+  - python >= 3
+  - pytest
   - swig
-  - numpy

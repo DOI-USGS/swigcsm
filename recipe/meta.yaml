@@ -11,16 +11,14 @@ build:
 requirements:
   build:
     - {{ compiler('cxx') }}  # [linux]
-    - cmake >=3.10
+    - cmake >=3.14
+    - swig
     - python
   host:
-    - csm
-    - python
-    - swig
+    - python >= 3
   run:
     - csm
-    - python
-    - numpy
+    - python 
 
 test:
   imports:
@@ -28,5 +26,6 @@ test:
 
 about:
   home: https://github.com/USGS-Astrogeology/CSM-Swig
-  license: None
-summary: "SWIG Wrapper to generate bindings to the Community Sensor Model"
+  license: CC0-1.0
+  license_file: LICENSE.md
+  summary: "SWIG Wrapper to generate bindings to the Community Sensor Model"
