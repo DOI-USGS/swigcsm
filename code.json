@@ -2,7 +2,7 @@
   {
     "name": "swigcsm",
     "organization": "U.S. Geological Survey",
-    "description": "GitHub respository containing SWIG wrappers for the CSM API",
+    "description": "GitHub repository containing SWIG wrappers for the CSM API",
     "version": "1.0.1",
     "status": "Production",
 
