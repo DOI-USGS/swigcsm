@@ -17,7 +17,7 @@ include_directories(${CSM_INCLUDE_DIR})
 swig_add_library(csmapi
                  LANGUAGE python
                  SOURCES ../csmapi.i)
-swig_link_libraries(csmapi ${CSM_LIBRARY} Python3::Module)
+swig_link_libraries(csmapi ${CSM_LIBRARY} Python3::Python)
 set_property(TARGET csmapi PROPERTY SWIG_USE_TARGET_INCLUDE_DIRECTORIES TRUE)
 
 set_target_properties(csmapi PROPERTIES LIBRARY_OUTPUT_DIRECTORY ${CMAKE_SWIG_OUTDIR})
