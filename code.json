@@ -3,22 +3,22 @@
     "name": "swigcsm",
     "organization": "U.S. Geological Survey",
     "description": "Git repository containing SWIG wrappers for the CSM API",
-    "version": "1.0.1",
-    "status": "Production",
+    "version": "1.0.2",
+    "status": "Development",
 
     "permissions": {
       "usageType": "openSource",
       "licenses": [
         {
           "name": "Public Domain, CC0-1.0",
-          "URL": "https://code.usgs.gov/astrogeology/swigcsm/-/blob/master/LICENSE.md"
+          "URL": "https://code.usgs.gov/astrogeology/swigcsm/-/raw/main/LICENSE.md"
         }
       ]
     },
 
-    "homepageURL": "https://code.usgs.gov/astrogeology/swigcsm/-/releases/1.0.1",
-    "downloadURL": "https://code.usgs.gov/astrogeology/swigcsm/-/archive/1.0.1/swigcsm-1.0.1.zip",
-    "disclaimerURL": "https://code.usgs.gov/astrogeology/swigcsm/-/blob/master/DISCLAIMER.md",
+    "homepageURL": "https://code.usgs.gov/astrogeology/swigcsm/",
+    "downloadURL": "https://code.usgs.gov/astrogeology/swigcsm/-/archive/main/swigcsm-main.zip",
+    "disclaimerURL": "https://code.usgs.gov/astrogeology/swigcsm/-/raw/main/DISCLAIMER.md",
     "repositoryURL": "https://code.usgs.gov/astrogeology/swigcsm",
     "vcs": "git",
 
