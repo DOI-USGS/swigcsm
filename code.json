@@ -19,7 +19,7 @@
       "homepageURL": "https://code.usgs.gov/astrogeology/swigcsm/-/releases/1.0.1",
       "downloadURL": "https://code.usgs.gov/astrogeology/swigcsm/-/archive/1.0.1/swigcsm-1.0.1.zip",
       "disclaimerURL": "https://code.usgs.gov/astrogeology/swigcsm/-/raw/1.0.1/DISCLAIMER.md",
-      "repositoryURL": "https://code.usgs.gov/astrogeology/swigcsm",
+      "repositoryURL": "https://code.usgs.gov/astrogeology/swigcsm.git",
       "vcs": "git",
   
       "laborHours": 40,
