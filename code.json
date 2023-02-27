@@ -3,7 +3,7 @@
     "name": "swigcsm",
     "organization": "U.S. Geological Survey",
     "description": "Git repository containing SWIG wrappers for the CSM API",
-    "version": "1.0.2",
+    "version": "main",
     "status": "Development",
 
     "permissions": {
@@ -19,7 +19,7 @@
     "homepageURL": "https://code.usgs.gov/astrogeology/swigcsm/",
     "downloadURL": "https://code.usgs.gov/astrogeology/swigcsm/-/archive/main/swigcsm-main.zip",
     "disclaimerURL": "https://code.usgs.gov/astrogeology/swigcsm/-/raw/main/DISCLAIMER.md",
-    "repositoryURL": "https://code.usgs.gov/astrogeology/swigcsm",
+    "repositoryURL": "https://code.usgs.gov/astrogeology/swigcsm.git",
     "vcs": "git",
 
     "laborHours": 40,
@@ -38,12 +38,12 @@
     ],
 
     "contact": {
-      "name": "Jesse Mapel",
-      "email": "jmapel@usgs.gov"
+      "name": "Dr. Jason Laura",
+      "email": "jlaura@usgs.gov"
     },
 
     "date": {
-      "metadataLastUpdated": "2022-06-11"
+      "metadataLastUpdated": "2023-02-27"
     }
   }
 ]
