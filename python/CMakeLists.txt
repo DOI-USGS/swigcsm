@@ -5,7 +5,7 @@ set_source_files_properties(../csmapi.i
                             PROPERTIES CPLUSPLUS ON)
 
 #Find dependencies
-find_package(Python3 REQUIRED COMPONENTS Interpreter Development)
+find_package(Python3 REQUIRED COMPONENTS Development)
 find_path(CSM_INCLUDE_DIR NAMES csm.h
                           PATH_SUFFIXES csm)
 find_library(CSM_LIBRARY NAMES csmapi)
