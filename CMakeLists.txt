@@ -1,4 +1,4 @@
-cmake_minimum_required(VERSION 3.14)
+cmake_minimum_required(VERSION 3.15)
 
 project(swigcsm VERSION 1.0.1 DESCRIPTION "SWIG wrappers for the Community Sensor Model API")
 
